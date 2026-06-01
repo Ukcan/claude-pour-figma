@@ -179,7 +179,7 @@ export function UseCases() {
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              className="heading-display text-accent-primary mt-4"
+              className="heading-1 text-accent-primary mt-4"
             >
               {featuredCase.headerTitle}
             </motion.h1>

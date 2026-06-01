@@ -66,7 +66,7 @@ export function HeroSection({
               initial={{ opacity: 0, y: 10 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.2 }}
-              className="heading-display text-text-primary"
+              className="heading-1 text-text-primary"
             >
               Flowdee transforme vos frictions UX en conversions.
             </motion.h1>
