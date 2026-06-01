@@ -22,6 +22,7 @@ import { ScrollMouseIndicator } from './components/Indicator/ScrollMouse';
 // import { StickyCTA } from './components/CTA/Sticky'; // Disabled — Zero Deletion Policy
 // import { DecorKeylines } from './components/Decor/Keylines'; // Disabled — Zero Deletion Policy
 import { DecorKeylinesParallaxFlow } from './components/Decor/KeylinesParallaxFlow';
+import { ParticleNetwork } from './components/Decor/ParticleNetwork';
 
 /**
  * BackgroundGrid Component
@@ -128,6 +129,9 @@ export default function App() {
 
           {/* BG / FX_KeylinesParallaxFlow_Dark — parallax keylines, dark mode only */}
           <DecorKeylinesParallaxFlow />
+
+          {/* Animated particle network background */}
+          <ParticleNetwork />
 
           {/* Scroll Progress Bar — minimalist hairline */}
           <ScrollBarIndicator />

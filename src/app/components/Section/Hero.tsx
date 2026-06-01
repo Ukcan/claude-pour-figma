@@ -33,7 +33,7 @@ export function HeroSection({
 
   return (
     <section 
-      className="relative min-h-[100vh] flex items-center py-32 md:py-40 bg-bg-base overflow-hidden" 
+      className="relative min-h-[100vh] flex items-center py-32 md:py-40 bg-transparent overflow-hidden"
       aria-label="Hero section"
       id="hero"
     >
