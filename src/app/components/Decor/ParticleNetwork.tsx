@@ -42,7 +42,10 @@ export function ParticleNetwork() {
     const ctx = canvas.getContext('2d');
     if (!ctx) return;
 
+    // When the user prefers reduced motion we keep a calmer, slower drift
+    // rather than freezing the field entirely.
     const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    const speed = reduceMotion ? 0.22 : 0.7;
 
     let width = 0;
     let height = 0;
@@ -61,8 +64,8 @@ export function ParticleNetwork() {
       particles = Array.from({ length: count }, () => ({
         x: Math.random() * width,
         y: Math.random() * height,
-        vx: (Math.random() - 0.5) * 0.35,
-        vy: (Math.random() - 0.5) * 0.35,
+        vx: (Math.random() - 0.5) * speed,
+        vy: (Math.random() - 0.5) * speed,
       }));
     };
 
@@ -135,8 +138,8 @@ export function ParticleNetwork() {
         }
 
         // velocity damping to avoid runaway from attraction
-        a.vx = Math.max(-0.7, Math.min(0.7, a.vx));
-        a.vy = Math.max(-0.7, Math.min(0.7, a.vy));
+        a.vx = Math.max(-1.1, Math.min(1.1, a.vx));
+        a.vy = Math.max(-1.1, Math.min(1.1, a.vy));
       }
     };
 
@@ -158,7 +161,7 @@ export function ParticleNetwork() {
       if (document.hidden) {
         running = false;
         cancelAnimationFrame(rafId);
-      } else if (!reduceMotion) {
+      } else {
         running = true;
         loop();
       }
@@ -180,11 +183,7 @@ export function ParticleNetwork() {
       attributeFilter: ['class'],
     });
 
-    if (reduceMotion) {
-      draw(); // single static frame
-    } else {
-      loop();
-    }
+    loop();
 
     return () => {
       running = false;
