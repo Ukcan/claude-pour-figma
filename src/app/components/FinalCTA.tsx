@@ -4,7 +4,7 @@ import { toast } from 'sonner@2.0.3';
 import { CTA_PRIMARY, CTA_SECONDARY } from '../constants/ctaCopy';
 import { TechnicalLabel } from './TechnicalLabel';
 import { ButtonPrimary } from './Button/Primary';
-import { CALENDAR_LINK } from '../constants/links';
+import { CALENDAR_LINK, AUDIT_LINK } from '../constants/links';
 
 export function FinalCTA() {
   const [formData, setFormData] = useState({
@@ -27,9 +27,9 @@ export function FinalCTA() {
     // Simulate form submission
     await new Promise(resolve => setTimeout(resolve, 1000));
 
-    const successMessage = choice === 'call' 
+    const successMessage = choice === 'call'
       ? 'Message envoyé ! Redirection vers le calendrier...'
-      : 'Demande d\'audit reçue ! Je vous répondrai sous 24h pour finaliser.';
+      : 'Redirection vers le paiement sécurisé...';
 
     toast.success(successMessage, {
       description: 'Merci de votre intérêt pour mes services.',
@@ -37,6 +37,8 @@ export function FinalCTA() {
 
     if (choice === 'call') {
       window.open(CALENDAR_LINK, '_blank', 'noopener,noreferrer');
+    } else {
+      window.open(AUDIT_LINK, '_blank', 'noopener,noreferrer');
     }
 
     setFormData({ name: '', email: '', company: '', message: '' });

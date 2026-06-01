@@ -7,7 +7,7 @@ import { ButtonSecondary } from './Button/Secondary';
 import svgPaths from '../imports/svg-sg0ezcs3e9';
 import { useTranslation } from '../contexts/LanguageContext';
 import { CTA_PRIMARY, CTA_SECONDARY } from '../constants/ctaCopy';
-import { CALENDAR_LINK } from '../constants/links';
+import { CALENDAR_LINK, AUDIT_LINK } from '../constants/links';
 
 function LogoFlowdee() {
   return (
@@ -105,6 +105,10 @@ export function Navigation({ darkMode, toggleDarkMode }: NavigationProps) {
     window.open(CALENDAR_LINK, '_blank', 'noopener,noreferrer');
   };
 
+  const openAudit = () => {
+    window.open(AUDIT_LINK, '_blank', 'noopener,noreferrer');
+  };
+
   return (
     <>
       <header className={`fixed top-0 w-full z-50 h-[64px] flex items-center transition-all duration-300 border-b ${
@@ -152,7 +156,7 @@ export function Navigation({ darkMode, toggleDarkMode }: NavigationProps) {
             <div className="h-5 w-px bg-border-0 mr-1" />
             {/* Secondary CTA - Outline */}
             <ButtonSecondary
-              onClick={() => scrollToSection('contact')}
+              onClick={openAudit}
               size="s"
               aria-label="Purchase audit"
             >

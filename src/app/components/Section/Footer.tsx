@@ -2,6 +2,7 @@ import React from 'react';
 import { Mail, Phone, MapPin, Linkedin, Twitter, Github } from 'lucide-react';
 import { useTranslation } from '../../contexts/LanguageContext';
 import { CTA_PRIMARY, CTA_SECONDARY } from '../../constants/ctaCopy';
+import { CALENDAR_LINK, AUDIT_LINK } from '../../constants/links';
 import { ButtonPrimary } from '../Button/Primary';
 import { ButtonSecondary } from '../Button/Secondary';
 
@@ -162,14 +163,14 @@ export function FooterSection({ onOpenCGV, onOpenPrivacy, onOpenCookies }: Foote
         {/* Global CTAs */}
         <div className="pt-12 pb-12 border-t border-border-0 flex flex-col sm:flex-row justify-center items-center gap-6">
           <ButtonPrimary
-            onClick={() => scrollToSection('contact')}
+            onClick={() => window.open(CALENDAR_LINK, '_blank', 'noopener,noreferrer')}
             size="l"
             className="px-12"
           >
             {CTA_PRIMARY.label}
           </ButtonPrimary>
           <ButtonSecondary
-            onClick={() => scrollToSection('contact')}
+            onClick={() => window.open(AUDIT_LINK, '_blank', 'noopener,noreferrer')}
             size="l"
             className="px-12"
           >

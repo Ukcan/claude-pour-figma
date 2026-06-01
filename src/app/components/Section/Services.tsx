@@ -3,7 +3,7 @@ import { motion } from 'motion/react';
 import { Check, Briefcase, PhoneCall, ArrowRight } from 'lucide-react';
 import { useTranslation } from '../../contexts/LanguageContext';
 import { ButtonPrimary } from '../Button/Primary';
-import { CALENDAR_LINK } from '../../constants/links';
+import { CALENDAR_LINK, AUDIT_LINK } from '../../constants/links';
 
 interface ServiceData {
   plan: string;
@@ -14,7 +14,7 @@ interface ServiceData {
   forWho: string;
   deliverables: string[];
   ctaPrimaryLabel: string;
-  ctaPrimaryAction: 'contact' | 'calendar';
+  ctaPrimaryAction: 'contact' | 'calendar' | 'audit';
   ctaSecondaryLabel: string;
   ctaSecondaryAction: 'contact' | 'caseStudies' | 'calendar';
   featured: boolean;
@@ -39,7 +39,7 @@ export function ServicesSection() {
         'Checklist QA avant release',
       ],
       ctaPrimaryLabel: 'Acheter l\u2019audit\u00A0— 960\u00A0€',
-      ctaPrimaryAction: 'contact',
+      ctaPrimaryAction: 'audit',
       ctaSecondaryLabel: 'Parler avant d\u2019acheter',
       ctaSecondaryAction: 'calendar',
       featured: false,
@@ -237,6 +237,8 @@ export function ServicesSection() {
                     onClick={
                       service.ctaPrimaryAction === 'calendar'
                         ? () => window.open(CALENDAR_LINK, '_blank', 'noopener,noreferrer')
+                        : service.ctaPrimaryAction === 'audit'
+                        ? () => window.open(AUDIT_LINK, '_blank', 'noopener,noreferrer')
                         : scrollToContact
                     }
                     size="m"
