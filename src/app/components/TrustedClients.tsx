@@ -27,7 +27,7 @@ export function TrustedClients() {
           className="flex flex-col items-center mb-16"
         >
           {/* <TechnicalLabel sectionId="CLIENTS_DB_01" /> */}
-          <h1 className="heading-1 text-text-primary mt-4">
+          <h1 className="heading-1 text-text-primary mt-4 text-center">
             {t.trustedClients.title}
           </h1>
         </motion.div>

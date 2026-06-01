@@ -280,7 +280,7 @@ export function UseCases() {
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              className="heading-1 text-text-primary mt-4"
+              className="heading-1 text-text-primary mt-4 text-center"
             >
               Autres réalisations & Impact
             </motion.h1>
