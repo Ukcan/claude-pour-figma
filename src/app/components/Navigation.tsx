@@ -136,9 +136,9 @@ export function Navigation({ darkMode, toggleDarkMode }: NavigationProps) {
                     transition-all duration-200 ease-in-out 
                     nav-focus-treatment
 
-                    ${isActive 
-                      ? 'text-text-primary bg-surface-1' 
-                      : 'text-text-secondary bg-transparent hover:text-text-primary hover:bg-surface-1/50'
+                    ${isActive
+                      ? 'text-accent-primary bg-accent-tint'
+                      : 'text-text-secondary bg-transparent hover:text-accent-primary hover:bg-accent-tint'
                     }
                   `}
                   aria-label={`Navigate to ${item.label}`}
