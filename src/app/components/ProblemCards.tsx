@@ -57,7 +57,7 @@ export function ProblemCards() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5 }}
-              className="heading-1 text-center text-text-primary mt-4"
+              className="heading-1 text-center text-text-primary mt-4 whitespace-nowrap text-[clamp(1.3rem,4.4vw,3.3rem)]"
             >
               VOUS RECONNAISSEZ CES PROBLÈMES ?
             </motion.h2>
