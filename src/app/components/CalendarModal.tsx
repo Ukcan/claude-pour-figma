@@ -10,9 +10,14 @@ import { CALENDAR_EMBED_URL } from '../constants/links';
  */
 export function CalendarModal() {
   const [open, setOpen] = useState(false);
+  const [context, setContext] = useState<string | null>(null);
 
   useEffect(() => {
-    const onOpen = () => setOpen(true);
+    const onOpen = (e: Event) => {
+      const detail = (e as CustomEvent).detail;
+      setContext(detail?.context ?? null);
+      setOpen(true);
+    };
     window.addEventListener('flowdee:open-calendar', onOpen);
     return () => window.removeEventListener('flowdee:open-calendar', onOpen);
   }, []);
@@ -51,7 +56,7 @@ export function CalendarModal() {
 
           {/* Panel */}
           <motion.div
-            className="relative w-full max-w-[760px] h-[82vh] max-h-[760px] bg-white border border-accent-border rounded-[20px] overflow-hidden shadow-soft"
+            className="relative w-full max-w-[760px] h-[82vh] max-h-[760px] bg-white border border-accent-border rounded-[20px] overflow-hidden shadow-soft flex flex-col"
             initial={{ opacity: 0, scale: 0.96, y: 12 }}
             animate={{ opacity: 1, scale: 1, y: 0 }}
             exit={{ opacity: 0, scale: 0.96, y: 12 }}
@@ -67,10 +72,22 @@ export function CalendarModal() {
               <X size={20} weight="bold" />
             </button>
 
+            {/* Contextual header — shows which offer the call is about */}
+            {context && (
+              <div className="shrink-0 bg-surface-0 border-b border-border-0 px-6 py-4 pr-16">
+                <p className="font-body text-[11px] font-medium uppercase tracking-[0.12em] text-text-muted">
+                  À propos de votre demande
+                </p>
+                <p className="font-body text-[15px] font-semibold text-accent-primary mt-0.5">
+                  {context}
+                </p>
+              </div>
+            )}
+
             <iframe
               src={CALENDAR_EMBED_URL}
               title="Réserver un appel — Flowdee"
-              className="w-full h-full border-0"
+              className="w-full flex-1 border-0"
               style={{ background: '#ffffff' }}
               loading="lazy"
             />

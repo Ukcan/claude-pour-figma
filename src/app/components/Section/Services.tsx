@@ -102,13 +102,13 @@ export function ServicesSection() {
     }
   };
 
-  const handleSecondaryAction = (action: ServiceData['ctaSecondaryAction']) => {
+  const handleSecondaryAction = (action: ServiceData['ctaSecondaryAction'], context?: string) => {
     switch (action) {
       case 'caseStudies':
         scrollToCaseStudies();
         break;
       case 'calendar':
-        window.dispatchEvent(new CustomEvent('flowdee:open-calendar'));
+        window.dispatchEvent(new CustomEvent('flowdee:open-calendar', { detail: context ? { context } : undefined }));
         break;
       case 'contact':
       default:
@@ -240,7 +240,7 @@ export function ServicesSection() {
                   <ButtonPrimary
                     onClick={
                       service.ctaPrimaryAction === 'calendar'
-                        ? () => window.dispatchEvent(new CustomEvent('flowdee:open-calendar'))
+                        ? () => window.dispatchEvent(new CustomEvent('flowdee:open-calendar', { detail: { context: service.title } }))
                         : service.ctaPrimaryAction === 'audit'
                         ? () => { window.location.href = AUDIT_LINK; }
                         : scrollToContact
@@ -255,7 +255,7 @@ export function ServicesSection() {
                   {/* Secondary — text link, not button */}
                   <button
                     type="button"
-                    onClick={() => handleSecondaryAction(service.ctaSecondaryAction)}
+                    onClick={() => handleSecondaryAction(service.ctaSecondaryAction, service.title)}
                     className="
                       group/link inline-flex items-center justify-center gap-1.5
                       min-h-[44px] px-2
