@@ -557,6 +557,15 @@ html {
   background-size: 300% 300%;
 }
 
+/* Subtle hairline grid — "technical/precise" calm background (static) */
+.section-grid {
+  background-color: var(--bg-base);
+  background-image:
+    linear-gradient(to right, var(--border-0) 1px, transparent 1px),
+    linear-gradient(to bottom, var(--border-0) 1px, transparent 1px);
+  background-size: 56px 56px;
+}
+
 @media (prefers-reduced-motion: reduce) {
   .aurora-bg { animation-duration: 60s; }
 }
