@@ -557,6 +557,32 @@ html {
   background-size: 300% 300%;
 }
 
+/* === PARTNER MARQUEE — infinite horizontal scroll === */
+.marquee-mask {
+  overflow: hidden;
+  -webkit-mask-image: linear-gradient(to right, transparent 0%, #000 12%, #000 88%, transparent 100%);
+  mask-image: linear-gradient(to right, transparent 0%, #000 12%, #000 88%, transparent 100%);
+}
+
+.marquee-track {
+  display: flex;
+  width: max-content;
+  animation: marqueeScroll 30s linear infinite;
+}
+
+.marquee-mask:hover .marquee-track {
+  animation-play-state: paused;
+}
+
+@keyframes marqueeScroll {
+  from { transform: translateX(0); }
+  to   { transform: translateX(-50%); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .marquee-track { animation-duration: 60s; }
+}
+
 /* Subtle hairline grid — "technical/precise" calm background (static) */
 .section-grid {
   background-color: var(--bg-base);

@@ -32,35 +32,28 @@ export function TrustedClients() {
           </h2>
         </motion.div>
 
-        {/* Segment cards */}
+        {/* Partner marquee — infinite scroll, pauses on hover */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.5, delay: 0.2 }}
-          className="flex flex-wrap justify-center gap-4"
+          className="marquee-mask"
+          aria-label="Partenaires et références"
         >
-          {clientSegments.map((client, index) => (
-            <motion.div
-              key={client.segment}
-              initial={{ opacity: 0, scale: 0.95 }}
-              whileInView={{ opacity: 1, scale: 1 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.3, delay: index * 0.05 }}
-              className="card-surface h-[120px] w-full sm:w-[calc(50%-1rem)] md:w-[calc(25%-1rem)] lg:w-[180px] flex flex-col items-center justify-center bg-surface-0 hover:border-border-1 group transition-all"
-            >
-              <div className="text-center px-4">
-                <div className="font-body font-medium uppercase text-[12px] leading-tight text-text-primary tracking-[0.05em] group-hover:text-accent-primary transition-colors">
+          <div className="marquee-track py-2">
+            {[...clientSegments, ...clientSegments].map((client, index) => (
+              <div
+                key={index}
+                aria-hidden={index >= clientSegments.length ? 'true' : undefined}
+                className="card-surface h-[104px] w-[220px] mx-3 shrink-0 flex items-center justify-center bg-surface-0 group"
+              >
+                <div className="font-body font-medium uppercase text-[13px] leading-tight text-text-primary tracking-[0.06em] group-hover:text-accent-primary transition-colors text-center px-6">
                   {client.segment}
                 </div>
-                {client.detail && (
-                  <div className="font-body text-[10px] font-medium uppercase tracking-widest mt-1 text-text-muted">
-                    {client.detail}
-                  </div>
-                )}
               </div>
-            </motion.div>
-          ))}
+            ))}
+          </div>
         </motion.div>
 
         {/* NDA Note */}
