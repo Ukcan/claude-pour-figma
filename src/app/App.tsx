@@ -7,6 +7,7 @@ import { HeaderNav } from './components/Nav/Header';
 import { HeroSection } from './components/Section/Hero';
 import { TrustedClientsSection } from './components/Section/TrustedClients';
 import { ProblemsSection } from './components/Section/Problems';
+import { DeliverablesSection } from './components/Section/Deliverables';
 import { CaseStudiesSection } from './components/Section/CaseStudies';
 import { ServicesSection } from './components/Section/Services';
 import { ApproachSection } from './components/Section/Approach';
@@ -174,6 +175,7 @@ export default function App() {
             <HeroSection />
             <TrustedClientsSection />
             <ProblemsSection />
+            <DeliverablesSection />
             <ServicesSection />
             <CaseStudiesSection />
             <ApproachSection />
