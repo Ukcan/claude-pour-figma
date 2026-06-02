@@ -165,9 +165,9 @@ export function ServicesSection() {
                     <span
                       className="
                         inline-flex items-center gap-1.5
-                        font-body text-[10px] px-3 py-1.5
+                        font-body text-[11px] px-3 py-1.5
                         bg-accent-primary text-on-accent
-                        font-bold whitespace-nowrap tracking-[0.08em] uppercase
+                        font-bold whitespace-nowrap tracking-[0.02em] lowercase
                         rounded-full
                         shadow-[0_4px_14px_-4px_var(--accent-primary)]
                       "
