@@ -52,7 +52,7 @@ export function ProblemCards() {
         <div className="flex flex-col items-center mb-16">
           {/* <TechnicalLabel sectionId="PROBLEMS_01" /> */}
           <ParallaxHeading>
-            <motion.h1
+            <motion.h2
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
@@ -60,7 +60,7 @@ export function ProblemCards() {
               className="heading-1 text-center text-text-primary mt-4"
             >
               VOUS RECONNAISSEZ CES PROBLÈMES ?
-            </motion.h1>
+            </motion.h2>
           </ParallaxHeading>
         </div>
 

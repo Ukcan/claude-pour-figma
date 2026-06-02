@@ -62,7 +62,7 @@ export function FAQSection() {
         <div className="flex flex-col items-center mb-16">
           {/* <TechnicalLabel sectionId="FAQ_TERMINAL_01" /> */}
           <ParallaxHeading>
-            <motion.h1
+            <motion.h2
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
@@ -70,7 +70,7 @@ export function FAQSection() {
               className="heading-1 text-center text-text-primary mt-4"
             >
               {t.faq.title}
-            </motion.h1>
+            </motion.h2>
           </ParallaxHeading>
         </div>
 

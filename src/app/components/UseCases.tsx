@@ -175,14 +175,14 @@ export function UseCases() {
           {/* Header */}
           <div className="flex flex-col items-center mb-20 text-center">
             {/* <TechnicalLabel sectionId="CASE_STUDY_FEATURED" /> */}
-            <motion.h1 
+            <motion.h2
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               className="heading-1 text-accent-primary mt-4"
             >
               {featuredCase.headerTitle}
-            </motion.h1>
+            </motion.h2>
             <motion.p 
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -276,14 +276,14 @@ export function UseCases() {
         <div className="max-w-[1184px] mx-auto px-8 md:px-16 relative z-10">
           <div className="flex flex-col mb-16">
             {/* <TechnicalLabel sectionId="PORTFOLIO_MODULE" /> */}
-            <motion.h1
+            <motion.h2
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               className="heading-1 text-text-primary mt-4 text-center"
             >
               Autres réalisations & Impact
-            </motion.h1>
+            </motion.h2>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
