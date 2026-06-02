@@ -72,17 +72,15 @@ export function CalendarModal() {
               <X size={20} weight="bold" />
             </button>
 
-            {/* Contextual header — shows which offer the call is about */}
-            {context && (
-              <div className="shrink-0 bg-surface-0 border-b border-border-0 px-6 py-4 pr-16">
-                <p className="font-body text-[11px] font-medium uppercase tracking-[0.12em] text-text-muted">
-                  À propos de votre demande
-                </p>
-                <p className="font-body text-[15px] font-semibold text-accent-primary mt-0.5">
-                  {context}
-                </p>
-              </div>
-            )}
+            {/* Contextual header — offer name when opened from a pack, or a default mention for the 30-min discovery call */}
+            <div className="shrink-0 bg-surface-0 border-b border-border-0 px-6 py-4 pr-16">
+              <p className="font-body text-[11px] font-medium uppercase tracking-[0.12em] text-text-muted">
+                {context ? 'À propos de votre demande' : 'Appel découverte · 30 min'}
+              </p>
+              <p className="font-body text-[15px] font-semibold text-accent-primary mt-0.5">
+                {context ?? 'Échange sans engagement pour cibler vos points de friction et vous orienter vers le format le plus adapté.'}
+              </p>
+            </div>
 
             <iframe
               src={CALENDAR_EMBED_URL}
