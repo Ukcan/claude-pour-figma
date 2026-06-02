@@ -59,7 +59,7 @@ export function ProblemCards() {
               transition={{ duration: 0.5 }}
               className="heading-1 text-center text-text-primary mt-4 whitespace-nowrap text-[clamp(1.3rem,4.4vw,3.3rem)]"
             >
-              VOUS RECONNAISSEZ CES PROBLÈMES ?
+              CES SIGNAUX VOUS PARLENT ?
             </motion.h2>
           </ParallaxHeading>
         </div>
@@ -79,7 +79,7 @@ export function ProblemCards() {
               tabIndex={0}
               onClick={scrollToContact}
               onKeyDown={(e) => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); scrollToContact(); } }}
-              aria-label="Activer mes inscrits — scroll vers contact"
+              aria-label="Clarifier mon offre — scroll vers contact"
               className="w-full card-surface problem-card flex flex-col items-center text-center p-10 h-full justify-between cursor-pointer"
             >
               {/* TopGroup - Internal structure to align top elements */}
@@ -94,7 +94,7 @@ export function ProblemCards() {
                 {/* Slot 2: Title - Align to the top to sync the first line across cards */}
                 <div className="h-[56px] flex items-start justify-center w-full">
                   <h3 className="font-heading text-[20px] text-text-primary leading-[1.2] max-w-[280px] tracking-[-0.01em]" style={{ fontWeight: 400 }}>
-                    BEAUCOUP D'INSCRIPTIONS, PEU D'ACTIVATION ?
+                    VOTRE OFFRE N’EST PAS COMPRISE ASSEZ VITE ?
                   </h3>
                 </div>
                 
@@ -103,13 +103,13 @@ export function ProblemCards() {
                   {/* Slot 3: Stat */}
                   <div className="h-[44px] flex items-center justify-center w-full">
                     <span className="font-display text-[26px] text-accent-primary leading-none tracking-[-0.01em] whitespace-nowrap" style={{ fontWeight: 700 }}>
-                      40-60% drop
+                      Offre floue
                     </span>
                   </div>
                   {/* Slot 4: Subtext */}
                   <div className="h-[40px] flex items-start justify-center w-full mt-1">
                     <span className="font-body text-[11px] font-medium uppercase tracking-widest text-text-muted max-w-[240px]">
-                      avant activation
+                      le visiteur part avant d’avoir compris
                     </span>
                   </div>
                   {/* Slot 5: Meta */}
@@ -131,7 +131,7 @@ export function ProblemCards() {
                     className="button-secondary inline-flex items-center justify-center w-full h-full rounded-[14px] text-sm font-medium min-h-[44px] pointer-events-none !border-0 problem-card-cta"
                     aria-hidden="true"
                   >
-                    Activer mes inscrits
+                    Clarifier mon offre
                   </span>
                 </div>
               </div>
@@ -150,7 +150,7 @@ export function ProblemCards() {
               tabIndex={0}
               onClick={scrollToContact}
               onKeyDown={(e) => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); scrollToContact(); } }}
-              aria-label="Récupérer des ventes — scroll vers contact"
+              aria-label="Fluidifier le parcours — scroll vers contact"
               className="w-full card-surface problem-card flex flex-col items-center text-center p-10 h-full justify-between cursor-pointer"
             >
               {/* TopGroup */}
@@ -165,7 +165,7 @@ export function ProblemCards() {
                 {/* Slot 2: Title */}
                 <div className="h-[56px] flex items-start justify-center w-full">
                   <h3 className="font-heading text-[20px] text-text-primary leading-[1.2] max-w-[280px] tracking-[-0.01em]" style={{ fontWeight: 400 }}>
-                    VOTRE TUNNEL DE PAIEMENT PERD DES VENTES ?
+                    VOS PARCOURS DEMANDENT TROP D’EFFORT ?
                   </h3>
                 </div>
                 
@@ -173,13 +173,13 @@ export function ProblemCards() {
                   {/* Slot 3: Stat */}
                   <div className="h-[44px] flex items-center justify-center w-full">
                     <span className="font-display text-[26px] text-accent-primary leading-none tracking-[-0.01em] whitespace-nowrap" style={{ fontWeight: 700 }}>
-                      69.8%
+                      Trop d’étapes
                     </span>
                   </div>
                   {/* Slot 4: Subtext */}
                   <div className="h-[40px] flex items-start justify-center w-full mt-1">
                     <span className="font-body text-[11px] font-medium uppercase tracking-widest text-text-muted max-w-[240px]">
-                      abandon panier moyen e-commerce
+                      hésitation, friction, parcours flou
                     </span>
                   </div>
                   {/* Slot 5: Meta */}
@@ -201,7 +201,7 @@ export function ProblemCards() {
                     className="button-secondary inline-flex items-center justify-center w-full h-full rounded-[14px] text-sm font-medium min-h-[44px] pointer-events-none !border-0 problem-card-cta"
                     aria-hidden="true"
                   >
-                    Récupérer des ventes
+                    Fluidifier le parcours
                   </span>
                 </div>
               </div>
@@ -220,7 +220,7 @@ export function ProblemCards() {
               tabIndex={0}
               onClick={scrollToContact}
               onKeyDown={(e) => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); scrollToContact(); } }}
-              aria-label="Simplifier mon interface — scroll vers contact"
+              aria-label="Convertir mon trafic — scroll vers contact"
               className="w-full card-surface problem-card flex flex-col items-center text-center p-10 h-full justify-between cursor-pointer"
             >
               {/* TopGroup */}
@@ -235,7 +235,7 @@ export function ProblemCards() {
                 {/* Slot 2: Title */}
                 <div className="h-[56px] flex items-start justify-center w-full">
                   <h3 className="font-heading text-[20px] text-text-primary leading-[1.2] max-w-[280px] tracking-[-0.01em]" style={{ fontWeight: 400 }}>
-                    LES UTILISATEURS SE PERDENT ET ABANDONNENT ?
+                    DU TRAFIC, MAIS PEU DE CONVERSIONS ?
                   </h3>
                 </div>
                 
@@ -243,13 +243,13 @@ export function ProblemCards() {
                   {/* Slot 3: Stat */}
                   <div className="h-[44px] flex items-center justify-center w-full">
                     <span className="font-display text-[26px] text-accent-primary leading-none tracking-[-0.01em] whitespace-nowrap" style={{ fontWeight: 700 }}>
-                      22% abandon
+                      Preuve tardive
                     </span>
                   </div>
                   {/* Slot 4: Subtext */}
                   <div className="h-[40px] flex items-start justify-center w-full mt-1">
                     <span className="font-body text-[11px] font-medium uppercase tracking-widest text-text-muted max-w-[240px]">
-                      car l'interface est trop complexe
+                      confiance pas installée au bon moment
                     </span>
                   </div>
                   {/* Slot 5: Meta */}
@@ -271,7 +271,7 @@ export function ProblemCards() {
                     className="button-secondary inline-flex items-center justify-center w-full h-full rounded-[14px] text-sm font-medium min-h-[44px] pointer-events-none !border-0 problem-card-cta"
                     aria-hidden="true"
                   >
-                    Simplifier mon interface →
+                    Convertir mon trafic
                   </span>
                 </div>
               </div>
@@ -290,7 +290,7 @@ export function ProblemCards() {
             className="text-center space-y-6"
           >
             <p className="font-body text-[16px] text-text-secondary max-w-[700px] mx-auto font-normal">
-              Vous reconnaissez ces symptômes ? L'audit est le point de départ le plus rapide.
+              Si un seul de ces points vous parle, l’audit est le moyen le plus rapide de le corriger.
             </p>
             <div className="flex flex-row items-center justify-center gap-4 flex-wrap">
               <ButtonPrimary
