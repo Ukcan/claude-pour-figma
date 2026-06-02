@@ -31,17 +31,17 @@ export function ServicesSection() {
       timeline: '72H–5\u00A0JOURS',
       title: 'Audit UX',
       price: '279\u00A0€',
-      description: 'Diagnostic complet de tes frictions + maquettes correctives prioritaires.',
-      forWho: '',
+      description: 'Diagnostic complet de vos frictions + maquettes correctives prioritaires, prêtes à implémenter.',
+      forWho: 'Pour : un site ou une landing qui convertit moins que prévu',
       deliverables: [
-        'Audit heuristique (UX + accessibilité)',
+        'Audit UX, SEO & accessibilité',
         'Backlog priorisé impact/effort',
         'Maquettes correctives (3–5)',
-        'Checklist QA avant release',
+        'Checklist QA avant mise en ligne',
       ],
       ctaPrimaryLabel: 'Acheter l\u2019audit\u00A0— 279\u00A0€',
       ctaPrimaryAction: 'audit',
-      ctaSecondaryLabel: 'Parler avant d\u2019acheter',
+      ctaSecondaryLabel: 'Poser mes questions',
       ctaSecondaryAction: 'calendar',
       featured: false,
       microProof: 'Livré en 72\u00A0h–5\u00A0j\u00A0\u2022\u00A03–5 maquettes',
@@ -51,8 +51,8 @@ export function ServicesSection() {
       timeline: '1–2\u00A0SEMAINES',
       title: 'Sprint Design + Tests',
       price: 'Dès 2\u00A0400\u00A0€',
-      description: 'De l\u2019idée au prototype testé en 2\u00A0semaines.',
-      forWho: 'Pour\u00A0: feature clé, onboarding, checkout complexe',
+      description: 'De l\u2019idée au prototype testé et validé, en 2\u00A0semaines.',
+      forWho: 'Pour\u00A0: fiabiliser une feature clé, un onboarding ou un checkout',
       deliverables: [
         'Discovery légère (jobs-to-be-done)',
         'User flows + prototype cliquable',
@@ -71,8 +71,8 @@ export function ServicesSection() {
       timeline: 'MENSUEL',
       title: 'Design Partner',
       price: 'Sur devis',
-      description: 'Un designer UX intégré à ton équipe, en continu.',
-      forWho: 'Pour\u00A0: itérations continues, design system, scaling',
+      description: 'Un designer UX intégré à votre équipe, en continu.',
+      forWho: 'Pour\u00A0: itérer en continu, structurer un design system, scaler',
       deliverables: [
         'Itérations continues & sprints',
         'A/B tests & optimisations',
@@ -318,7 +318,7 @@ export function ServicesSection() {
               <PhoneCall weight="duotone" className="w-5 h-5 text-accent-primary" />
             </div>
             <p className="font-body text-[15px] text-text-primary font-normal max-w-md">
-              Vous ne savez pas quoi choisir ? Réservez un appel : je recommande le format le plus rentable.
+              Vous ne savez pas quoi choisir ? Réservez un appel : je vous oriente vers le format le plus adapté.
             </p>
             <a
               href={CALENDAR_LINK}

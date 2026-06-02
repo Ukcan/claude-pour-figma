@@ -302,7 +302,7 @@ export const translations: Record<Language, Translations> = {
     },
 
     services: {
-      title: '3 formats pour chaque phase',
+      title: 'De l’audit rapide à l’accompagnement continu',
       timeline: {
         audit: '72h–5 jours',
         sprint: '1–3 semaines',
@@ -588,7 +588,7 @@ export const translations: Record<Language, Translations> = {
     },
 
     services: {
-      title: '3 formats for every phase',
+      title: 'From quick audit to ongoing partnership',
       timeline: {
         audit: '72h–5 days',
         sprint: '1–3 weeks',
