@@ -56,7 +56,7 @@ export function HeroSection({
               className="relative inline-block"
             >
               <span className="relative z-10 font-body text-[12px] px-5 py-2 bg-accent-tint text-[color:var(--accent-eyebrow)] font-bold tracking-[0.08em] uppercase rounded-full border border-accent-primary/40">
-                Impact / Effort
+                Audit UX · SEO · Accessibilité · Microcopy
               </span>
             </motion.div>
 
@@ -67,7 +67,7 @@ export function HeroSection({
               transition={{ duration: 0.5, delay: 0.2 }}
               className="heading-display text-text-primary"
             >
-              Flowdee transforme vos frictions UX en conversions.
+              Identifiez ce qui bloque vos conversions, puis corrigez-le dans le bon ordre.
             </motion.h1>
 
             {/* Body Text / Sous-titre */}
@@ -77,7 +77,7 @@ export function HeroSection({
               transition={{ duration: 0.5, delay: 0.3 }}
               className="body-large max-w-[700px] mx-auto"
             >
-              Audit UX → priorisation impact/effort → maquettes correctives prêtes à implémenter.
+              Flowdee analyse votre landing, site ou tunnel pour repérer les frictions qui freinent vos visiteurs : clarté de l’offre, CTA, formulaire, preuve, SEO, accessibilité et microcopy.
             </motion.p>
 
             {/* Proof Pills */}
@@ -87,7 +87,7 @@ export function HeroSection({
               transition={{ duration: 0.5, delay: 0.35 }}
               className="flex flex-wrap gap-3 justify-center"
             >
-              {['Acquisition (+ leads)', 'Checkout (- abandons)', 'Onboarding (+ activation)'].map((p) => (
+              {['Livrable priorisé', 'Recommandations concrètes', 'Sans refonte inutile'].map((p) => (
                 <span key={p} className="px-4 py-1.5 bg-surface-1 text-text-primary font-body text-[12px] font-bold tracking-[0.04em] uppercase rounded-full cursor-default select-none border border-border-1">
                   {p}
                 </span>
@@ -110,7 +110,7 @@ export function HeroSection({
                     size="m"
                     className="w-full"
                   >
-                    Réserver un appel (30 min)
+                    Trouver mes points de friction
                   </ButtonPrimary>
                   <p className="font-body text-[10px] font-medium uppercase tracking-widest text-text-muted text-center">
                     {CTA_PRIMARY.subtext}
@@ -124,7 +124,7 @@ export function HeroSection({
                     size="m"
                     className="w-full"
                   >
-                    Voir l'offre Audit (dès 279€)
+                    Voir ce que l’audit analyse
                   </ButtonSecondary>
                   <p className="font-body text-[10px] font-medium uppercase tracking-widest text-text-muted text-center">
                     {CTA_SECONDARY.subtext}
