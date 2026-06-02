@@ -240,7 +240,7 @@ export function UseCases() {
               {/* Section Résultats */}
               <div>
                 <h3 className="font-heading text-[18px] text-accent-primary tracking-[-0.01em] mb-6" style={{ fontWeight: 500 }}>
-                  LOGS_RÉSULTATS
+                  RÉSULTATS MESURÉS
                 </h3>
                 <div className="grid grid-cols-2 gap-4">
                   <div className="p-8 bg-surface-0 border border-border-0 flex flex-col items-center justify-center rounded-[24px]">
