@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=1200, initial-scale=1" />
+  <title>Flowdee — OG Image</title>
+  <link rel="preconnect" href="https://api.fontshare.com" />
+  <link href="https://api.fontshare.com/v2/css?f[]=satoshi@300,400,500,700,900&display=swap" rel="stylesheet" />
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    html, body { background: #0E131B; }
+    .og {
+      position: relative;
+      width: 1200px;
+      height: 630px;
+      overflow: hidden;
+      background:
+        radial-gradient(1100px 700px at 78% 18%, rgba(212,178,115,0.10), transparent 60%),
+        linear-gradient(135deg, #141A24 0%, #162032 45%, #13242B 75%, #141A24 100%);
+      font-family: "Satoshi", system-ui, sans-serif;
+      color: #F5F2EA;
+      padding: 72px 80px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+    /* constellation dots */
+    .dot { position: absolute; border-radius: 999px; background: #D4B273; }
+    .line { position: absolute; height: 1px; background: linear-gradient(90deg, rgba(212,178,115,0.5), transparent); transform-origin: left center; }
+
+    .brand { display: flex; align-items: center; gap: 16px; position: relative; z-index: 2; }
+    .mark {
+      width: 56px; height: 56px; border-radius: 15px;
+      background: #232D3D;
+      border: 1px solid rgba(212,178,115,0.30);
+      display: flex; align-items: center; justify-content: center;
+      box-shadow: 0 10px 28px -10px rgba(0,0,0,0.55);
+    }
+    .wordmark { font-weight: 700; font-size: 30px; letter-spacing: 0.18em; }
+
+    .center { position: relative; z-index: 2; }
+    h1 {
+      font-weight: 700;
+      font-size: 68px;
+      line-height: 1.05;
+      letter-spacing: -0.02em;
+      max-width: 880px;
+    }
+    h1 .gold { color: #E3C690; }
+    .rule { width: 84px; height: 5px; border-radius: 4px; background: #D4B273; margin: 30px 0 26px; }
+    .sub { font-size: 23px; font-weight: 400; color: #B8C0CC; max-width: 760px; line-height: 1.45; }
+
+    .badges { display: flex; gap: 14px; position: relative; z-index: 2; margin-top: 8px; }
+    .badge {
+      font-size: 16px; font-weight: 700;
+      padding: 9px 18px; border-radius: 999px;
+      color: #E3C690; border: 1.5px solid rgba(212,178,115,0.40);
+      background: rgba(212,178,115,0.10);
+      display: flex; align-items: center; gap: 9px;
+    }
+    .badge .pip { width: 8px; height: 8px; border-radius: 999px; background: #D4B273; }
+  </style>
+</head>
+<body>
+  <div class="og">
+    <!-- constellation -->
+    <div class="dot" style="width:5px;height:5px;top:90px;left:1010px;"></div>
+    <div class="dot" style="width:4px;height:4px;top:160px;left:1100px;"></div>
+    <div class="dot" style="width:6px;height:6px;top:240px;left:980px;"></div>
+    <div class="dot" style="width:3px;height:3px;top:120px;left:900px;opacity:.7;"></div>
+    <div class="dot" style="width:4px;height:4px;top:520px;left:1120px;opacity:.6;"></div>
+    <div class="line" style="top:92px;left:1015px;width:88px;transform:rotate(38deg);"></div>
+    <div class="line" style="top:243px;left:985px;width:120px;transform:rotate(-28deg);"></div>
+
+    <div class="brand">
+      <div class="mark">
+        <svg width="30" height="27" viewBox="0 0 20.1 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M0 1C0 0.447716 0.447715 0 1 0L10.3093 0C13.7915 1.50063e-07 16.192 1.12414 18.061 3.25862C19.7332 5.33388 20.0694 7.3319 19.9891 9.34914C19.8317 13.306 17.7462 15.2845 15.7001 16.5647C13.7351 17.7941 10.6225 17.971 8.16135 17.996C7.6091 18.0016 7.16146 17.5523 7.16146 17L7.16146 11.3438C7.16146 11.0845 7.26212 10.8354 7.44223 10.649L9.3771 8.64607C10.0019 7.99931 11.0963 8.44159 11.0963 9.34086V13.431C11.0963 13.9833 11.5472 14.4196 12.0843 14.2913C12.9235 14.0908 14.1369 13.6025 15.0705 12.4138C15.9393 11.3076 16.3297 10.0474 16.3297 9C16.3297 7.79741 15.917 6.77112 15.0705 5.70259C13.5647 3.80172 10.9783 3.80172 10.3093 3.80172C8.46341 3.80172 6.12263 3.80172 4.81571 3.80172C4.26343 3.80172 3.81682 4.24944 3.81682 4.80172V5.63362C3.81682 6.1859 4.26453 6.63362 4.81682 6.63362H7.9963C8.87246 6.63362 9.32501 7.68039 8.72479 8.31867L7.10348 10.0428C6.91449 10.2438 6.65087 10.3578 6.37499 10.3578L4.81682 10.3578C4.26453 10.3578 3.81682 10.8055 3.81682 11.3578L3.81682 17C3.81682 17.5523 3.3691 18 2.81682 18H1C0.447716 18 0 17.5523 0 17L0 1Z" fill="#E3C690"/>
+        </svg>
+      </div>
+      <div class="wordmark">FLOWDEE</div>
+    </div>
+
+    <div class="center">
+      <h1>Transformez vos frictions UX<br />en <span class="gold">conversions.</span></h1>
+      <div class="rule"></div>
+      <div class="sub">Audit UX · priorisation impact/effort · maquettes correctives prêtes à implémenter.</div>
+    </div>
+
+    <div class="badges">
+      <div class="badge"><span class="pip"></span>Audit dès 279 €</div>
+      <div class="badge"><span class="pip"></span>Livré en 72 h–5 j</div>
+    </div>
+  </div>
+</body>
+</html>
