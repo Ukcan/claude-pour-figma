@@ -144,3 +144,28 @@ pnpm install
 - [ ] Message de commit explicite + co-author.
 - [ ] Après push : **vérifier le déploiement Cloudflare en vert** (Deployments).
 - [ ] Si domaine/URL concerné : `og:url` / `canonical` / `og:image` / retour Stripe cohérents.
+
+---
+
+## CaseStudies — règle pour les métriques vérifiées
+
+Tant que les chiffres ne sont pas vérifiés, utiliser le label :
+`IMPACT OBSERVÉ`
+
+Revenir au label :
+`RÉSULTATS MESURÉS`
+
+uniquement si chaque métrique affichée dispose de ces éléments :
+
+- métrique avant ;
+- métrique après ;
+- période de mesure ;
+- source de la donnée ;
+- contexte du projet ;
+- niveau de confidentialité validé.
+
+**Interdiction :**
+- Ne jamais afficher de chiffre placeholder comme résultat réel.
+- Ne jamais présenter une métrique comme « mesurée » sans source vérifiable.
+- Ne jamais inventer de pourcentage, revenu, délai gagné ou taux de conversion.
+- Si une donnée est qualitative, utiliser une formulation directionnelle honnête : « en hausse », « réduit », « amélioré », « stabilisé », « clarifié ».
