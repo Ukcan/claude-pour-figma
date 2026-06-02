@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'motion/react';
-import { Check, Briefcase, PhoneCall, ArrowRight } from '@phosphor-icons/react';
+import { Check, Briefcase, PhoneCall, ArrowRight, Star } from '@phosphor-icons/react';
 import { ParallaxHeading } from '../Decor/ParallaxHeading';
 import { useTranslation } from '../../contexts/LanguageContext';
 import { ButtonPrimary } from '../Button/Primary';
@@ -154,7 +154,7 @@ export function ServicesSection() {
                 className={`
                   card-surface flex flex-col relative transition-all duration-200 p-8 lg:p-10
                   ${isFeatured
-                    ? 'bg-surface-0 border-border-1'
+                    ? 'bg-surface-0 border-accent-primary/40'
                     : 'bg-surface-0 border-border-0'
                   }
                 `}
@@ -164,14 +164,15 @@ export function ServicesSection() {
                   <div className="absolute top-3 right-3">
                     <span
                       className="
-                        inline-flex items-center gap-1
-                        font-body text-[9px] px-2.5 py-1
-                        bg-surface-2 text-text-secondary
-                        font-medium whitespace-nowrap tracking-[0.10em] uppercase
-                        rounded-full border border-border-0
+                        inline-flex items-center gap-1.5
+                        font-body text-[10px] px-3 py-1.5
+                        bg-accent-primary text-on-accent
+                        font-bold whitespace-nowrap tracking-[0.08em] uppercase
+                        rounded-full
+                        shadow-[0_4px_14px_-4px_var(--accent-primary)]
                       "
                     >
-                      <span className="text-[9px] leading-none" aria-hidden="true">⭐</span>
+                      <Star size={11} weight="fill" aria-hidden="true" />
                       Le plus choisi
                     </span>
                   </div>
