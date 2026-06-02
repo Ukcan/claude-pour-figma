@@ -110,11 +110,6 @@ export function ProblemCards() {
                     </span>
                   </div>
                   {/* Slot 5: Meta */}
-                  <div className="h-[20px] flex items-center justify-center w-full mt-2">
-                    <span className="font-body text-[10px] text-text-muted">
-                      SOURCE: BAYMARD INSTITUTE
-                    </span>
-                  </div>
                 </div>
               </div>
 
@@ -185,11 +180,6 @@ export function ProblemCards() {
                     </span>
                   </div>
                   {/* Slot 5: Meta */}
-                  <div className="h-[20px] flex items-center justify-center w-full mt-2">
-                    <span className="font-body text-[10px] text-text-muted">
-                      DATA NODE: CHECKOUT 2024
-                    </span>
-                  </div>
                 </div>
               </div>
 
@@ -260,11 +250,6 @@ export function ProblemCards() {
                     </span>
                   </div>
                   {/* Slot 5: Meta */}
-                  <div className="h-[20px] flex items-center justify-center w-full mt-2">
-                    <span className="font-body text-[10px] text-text-muted">
-                      SYSTEM LOG: COMPLEXITY MAX
-                    </span>
-                  </div>
                 </div>
               </div>
 
