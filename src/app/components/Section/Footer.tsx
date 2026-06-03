@@ -92,6 +92,14 @@ export function FooterSection({ onOpenCGV, onOpenPrivacy, onOpenCookies }: Foote
                     {item.label}
                   </button>
                 ))}
+                <a
+                  href="https://ukcan.github.io/benjamin-duffau-cv/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-left font-body text-[13px] font-normal text-text-muted hover:text-accent-primary transition-colors"
+                >
+                  Mon parcours (CV)
+                </a>
               </nav>
             </div>
 
